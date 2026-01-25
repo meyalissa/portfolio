@@ -1,0 +1,33 @@
+{
+  "name": "Melissa Sofia",
+  "title": "Netcentric Student",
+  "tagline": "Passionate about software development, problem-solving, and creating innovative solutions through technology.",
+  "profileImage": "images/profile.png",
+  "about": [
+    "I am a dedicated Netcentric student with a strong foundation in software development and a keen interest in full-stack web development, data structures, and algorithms. Throughout my academic journey, I have consistently sought opportunities to apply theoretical knowledge to practical projects.",
+    "My passion for technology extends beyond the classroom. I actively participate in hackathons, coding competitions, and collaborative projects that challenge me to think creatively and work effectively in team environments. I believe in continuous learning and staying updated with emerging technologies.",
+    "I am currently seeking internship opportunities where I can contribute my skills, learn from experienced professionals, and gain real-world experience in software development. I am particularly interested in roles that involve building scalable applications and solving complex technical challenges."
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "institution": "University of Technology",
+      "year": "2022 - 2026 (Expected)",
+      "coursework": [
+        "Data Structures & Algorithms",
+        "Object-Oriented Programming",
+        "Database Management Systems",
+        "Web Development",
+        "Software Engineering",
+        "Computer Networks",
+        "Operating Systems",
+        "Machine Learning Fundamentals"
+      ]
+    }
+  ],
+  "contact": {
+    "email": "melissa.sofia0204@gmail.com",
+    "github": "https://github.com/meyalissa",
+    "linkedin": "https://linkedin.com/in/melissasofia"
+  }
+}

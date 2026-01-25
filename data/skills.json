@@ -1,0 +1,52 @@
+{
+  "skills": [
+    {
+      "category": "Programming Languages",
+      "icon": "fas fa-code",
+      "items": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "C++",
+        "SQL",
+        "HTML5 & CSS3"
+      ]
+    },
+    {
+      "category": "Web Technologies",
+      "icon": "fas fa-globe",
+      "items": [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "RESTful APIs",
+        "Bootstrap & Tailwind CSS",
+        "Responsive Web Design"
+      ]
+    },
+    {
+      "category": "Tools & Technologies",
+      "icon": "fas fa-tools",
+      "items": [
+        "Git & GitHub",
+        "VS Code",
+        "MySQL & MongoDB",
+        "Postman",
+        "Docker (Basic)",
+        "Linux/Unix"
+      ]
+    },
+    {
+      "category": "Core Competencies",
+      "icon": "fas fa-brain",
+      "items": [
+        "Data Structures & Algorithms",
+        "Object-Oriented Programming",
+        "Database Design",
+        "Problem Solving",
+        "Team Collaboration",
+        "Agile Methodologies"
+      ]
+    }
+  ]
+}

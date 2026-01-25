@@ -1,0 +1,52 @@
+{
+  "projects": [
+    {
+      "title": "Task Management Application",
+      "description": "A full-stack web application for managing tasks and projects with user authentication, real-time updates, and collaborative features. Built with modern web technologies and responsive design principles.",
+      "technologies": ["React", "Node.js", "Express", "MongoDB", "JWT"],
+      "image": "images/image.png",
+      "github": "https://github.com/janedoe/task-manager",
+      "demo": ""
+    },
+    {
+      "title": "E-Commerce Platform",
+      "description": "A comprehensive online shopping platform featuring product browsing, shopping cart functionality, order management, and payment integration. Implemented secure authentication and admin dashboard.",
+      "technologies": ["JavaScript", "HTML/CSS", "MySQL", "PHP"],
+      "image": "images/image.png",
+      "github": "https://github.com/janedoe/ecommerce-platform",
+      "demo": ""
+    },
+    {
+      "title": "Weather Dashboard",
+      "description": "An interactive weather application that provides real-time weather information, forecasts, and location-based data visualization. Features a clean, intuitive interface with responsive design.",
+      "technologies": ["React", "API Integration", "Chart.js", "Tailwind CSS"],
+      "image": "images/image.png",
+      "github": "https://github.com/janedoe/weather-dashboard",
+      "demo": ""
+    },
+    {
+      "title": "Algorithm Visualizer",
+      "description": "An educational tool that visualizes popular sorting and searching algorithms in real-time. Helps students understand algorithm behavior through interactive animations and step-by-step execution.",
+      "technologies": ["JavaScript", "HTML5 Canvas", "CSS3", "Animation"],
+      "image": "images/image.png",
+      "github": "https://github.com/janedoe/algo-visualizer",
+      "demo": ""
+    },
+    {
+      "title": "Student Portal System",
+      "description": "A comprehensive student management system with features for course registration, grade tracking, assignment submission, and communication between students and faculty. Built as a team project.",
+      "technologies": ["Python", "Django", "PostgreSQL", "Bootstrap"],
+      "image": "images/image.png",
+      "github": "https://github.com/janedoe/student-portal",
+      "demo": ""
+    },
+    {
+      "title": "Personal Finance Tracker",
+      "description": "A budgeting application that helps users track expenses, set financial goals, and visualize spending patterns through interactive charts and reports. Features data export and budget alerts.",
+      "technologies": ["React", "Firebase", "Chart.js", "Material-UI"],
+      "image": "images/image.png",
+      "github": "https://github.com/janedoe/finance-tracker",
+      "demo": ""
+    }
+  ]
+}

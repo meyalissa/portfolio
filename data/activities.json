@@ -1,0 +1,70 @@
+{
+  "activities": [
+    {
+      "title": "University Hackathon 2024",
+      "organization": "Tech Innovation Club",
+      "date": "2024-03-15",
+      "description": "Participated in a 24-hour hackathon focused on developing solutions for sustainable technology. Collaborated with a team to build a mobile application addressing environmental awareness.",
+      "achievements": [
+        "Developed a working prototype within 24 hours",
+        "Placed in top 10 among 50+ teams",
+        "Gained experience in rapid prototyping and teamwork"
+      ]
+    },
+    {
+      "title": "Web Development Workshop",
+      "organization": "Computer Science Department",
+      "date": "2024-02-20",
+      "description": "Attended an intensive workshop on modern web development practices, focusing on React.js, responsive design, and deployment strategies. Completed hands-on projects and received certification.",
+      "achievements": [
+        "Built three complete web applications",
+        "Learned advanced React hooks and state management",
+        "Received workshop completion certificate"
+      ]
+    },
+    {
+      "title": "Open Source Contribution",
+      "organization": "GitHub Community",
+      "date": "2023-11-10",
+      "description": "Made first open-source contributions to various projects on GitHub, including bug fixes, documentation improvements, and feature implementations. Engaged with the developer community.",
+      "achievements": [
+        "Contributed to 5 different open-source projects",
+        "Fixed critical bugs and improved documentation",
+        "Learned collaborative development workflows"
+      ]
+    },
+    {
+      "title": "Database Design Competition",
+      "organization": "National Computing Society",
+      "date": "2023-09-05",
+      "description": "Competed in a national database design competition, creating an optimized database schema for a complex business scenario. Presented solution to industry professionals.",
+      "achievements": [
+        "Secured 2nd place nationally",
+        "Designed efficient normalized database structure",
+        "Presented to panel of industry experts"
+      ]
+    },
+    {
+      "title": "Peer Tutoring Program",
+      "organization": "University Tutoring Center",
+      "date": "2023-08-01",
+      "description": "Served as a peer tutor for introductory programming courses, helping fellow students understand fundamental concepts in Python and Java. Conducted weekly tutoring sessions.",
+      "achievements": [
+        "Tutored 20+ students over two semesters",
+        "Improved students' understanding and grades",
+        "Developed teaching and communication skills"
+      ]
+    },
+    {
+      "title": "Tech Talk: Introduction to Machine Learning",
+      "organization": "AI/ML Student Group",
+      "date": "2023-05-18",
+      "description": "Attended and participated in a comprehensive tech talk series on machine learning fundamentals, exploring various algorithms, applications, and ethical considerations in AI.",
+      "achievements": [
+        "Completed hands-on ML projects",
+        "Networked with industry professionals",
+        "Gained foundational knowledge in ML concepts"
+      ]
+    }
+  ]
+}

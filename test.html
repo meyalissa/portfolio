@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Test - Single File</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* CSS Variables for Light Mode */
+        :root {
+            --bg-color: #FAFAFA;
+            --text-color: #1F2933;
+            --card-bg: #FFFFFF;
+            --accent: #D4A5A5;
+        }
+
+        /* CSS Variables for Dark Mode */
+        [data-theme="dark"] {
+            --bg-color: #1a1d23;
+            --text-color: #E4E7EB;
+            --card-bg: #252a33;
+            --accent: #D4A5A5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+            padding: 20px;
+        }
+
+        .navbar {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--accent);
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 24px;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .theme-toggle:hover {
+            background-color: var(--bg-color);
+            transform: rotate(20deg);
+        }
+
+        .content {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .status {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-family: monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            transition: background-color 0.3s ease;
+        }
+
+        .test-button {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 10px 10px 0;
+            transition: transform 0.2s;
+        }
+
+        .test-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .success {
+            color: #28a745;
+        }
+
+        .error {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation with Theme Toggle -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">MS</a>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Navigation Links -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#activities" class="nav-link">Experience</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <!-- Theme Toggle Button -->
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <i class="fas fa-moon" id="themeIcon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>🌙 Dark Mode Test Page</h1>
+        <p>This is a single-file test to verify your dark mode is working correctly.</p>
+        <p>Click the moon/sun icon in the top right to toggle between light and dark mode.</p>
+        
+        <div style="margin-top: 20px;">
+            <button class="test-button" onclick="testButton()">Test Button Click</button>
+            <button class="test-button" onclick="manualDark()">Force Dark Mode</button>
+            <button class="test-button" onclick="manualLight()">Force Light Mode</button>
+            <button class="test-button" onclick="clearStorage()">Clear Storage</button>
+        </div>
+    </div>
+
+    <!-- Status Display -->
+    <div class="status" id="statusLog">
+        <strong>Status Log:</strong><br>
+        Initializing...
+    </div>
+
+    <script>
+        // Get DOM elements
+        const html = document.documentElement;
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const statusLog = document.getElementById('statusLog');
+
+        // Log function
+        function log(message, type = 'info') {
+            const timestamp = new Date().toLocaleTimeString();
+            const color = type === 'error' ? 'error' : type === 'success' ? 'success' : '';
+            statusLog.innerHTML += `<br><span class="${color}">[${timestamp}] ${message}</span>`;
+            console.log(message);
+        }
+
+        // Check if elements exist
+        log('Checking if elements exist...');
+        if (!themeToggle) {
+            log('❌ ERROR: Theme toggle button not found!', 'error');
+        } else {
+            log('✅ Theme toggle button found', 'success');
+        }
+
+        if (!themeIcon) {
+            log('❌ ERROR: Theme icon not found!', 'error');
+        } else {
+            log('✅ Theme icon found', 'success');
+        }
+
+        // Initialize theme
+        function initializeTheme() {
+            log('Initializing theme system...');
+            
+            const savedTheme = localStorage.getItem('theme');
+            log(`Saved theme in localStorage: ${savedTheme || 'none'}`);
+            
+            if (savedTheme) {
+                setTheme(savedTheme);
+            } else {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                log(`System prefers dark mode: ${prefersDark}`);
+                setTheme(prefersDark ? 'dark' : 'light');
+            }
+        }
+
+        // Set theme
+        function setTheme(theme) {
+            log(`Setting theme to: ${theme}`);
+            
+            if (theme === 'dark') {
+                html.setAttribute('data-theme', 'dark');
+                themeIcon.className = 'fas fa-sun';
+                localStorage.setItem('theme', 'dark');
+                log('✅ Dark mode activated!', 'success');
+            } else {
+                html.setAttribute('data-theme', 'light');
+                themeIcon.className = 'fas fa-moon';
+                localStorage.setItem('theme', 'light');
+                log('✅ Light mode activated!', 'success');
+            }
+            
+            // Verify
+            const currentTheme = html.getAttribute('data-theme');
+            log(`Current data-theme attribute: ${currentTheme}`);
+        }
+
+        // Toggle theme
+        function toggleTheme() {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            log(`Toggling from ${currentTheme} to ${newTheme}`);
+            setTheme(newTheme);
+        }
+
+        // Test functions
+        function testButton() {
+            log('Test button clicked!', 'success');
+            alert('Button click is working!');
+        }
+
+        function manualDark() {
+            log('Manually forcing dark mode...');
+            setTheme('dark');
+        }
+
+        function manualLight() {
+            log('Manually forcing light mode...');
+            setTheme('light');
+        }
+
+        function clearStorage() {
+            log('Clearing localStorage...');
+            localStorage.removeItem('theme');
+            log('✅ Storage cleared. Reloading page...', 'success');
+            setTimeout(() => location.reload(), 1000);
+        }
+
+        // Add event listener
+        if (themeToggle) {
+            themeToggle.addEventListener('click', function() {
+                log('Theme toggle button clicked!');
+                toggleTheme();
+            });
+            log('✅ Event listener added to theme toggle', 'success');
+        }
+
+        // Initialize on load
+        window.addEventListener('DOMContentLoaded', function() {
+            log('DOM fully loaded', 'success');
+            initializeTheme();
+            log('=== INITIALIZATION COMPLETE ===', 'success');
+            log('Click the moon/sun icon in the navbar to toggle theme.');
+        });
+
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            log(`System theme changed. Prefers dark: ${e.matches}`);
+            if (!localStorage.getItem('theme')) {
+                setTheme(e.matches ? 'dark' : 'light');
+            }
+        });
+    </script>
+</body>
+</html>
