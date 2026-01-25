@@ -4,127 +4,161 @@
  */
 
 // ==========================================
-// NAVIGATION & MOBILE MENU
+// INITIALIZE ON PAGE LOAD - MOVED TO TOP
 // ==========================================
 
-// Mobile menu toggle
-const menuToggle = document.getElementById('menuToggle');
-const navLinks = document.getElementById('navLinks');
-const navLinkItems = document.querySelectorAll('.nav-link');
-
-// Toggle mobile menu on click
-if (menuToggle) {
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-}
-
-// Close mobile menu when clicking a link
-navLinkItems.forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-    });
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('🚀 Portfolio initializing...');
+    
+    // Initialize theme FIRST
+    initializeTheme();
+    
+    // Initialize navigation
+    initNavigation();
+    
+    // Load all dynamic content
+    loadProfile();
+    setCurrentYear();
+    initScrollAnimations();
+    initContactForm();
+    
+    console.log('✅ Portfolio initialized successfully!');
+    console.log('To update content, edit JSON files in the data/ folder');
 });
 
 // ==========================================
 // DARK MODE / LIGHT MODE TOGGLE
 // ==========================================
 
-const themeToggle = document.getElementById('themeToggle');
-const themeIcon = document.getElementById('themeIcon');
-const html = document.documentElement;
-
-/**
- * Initialize theme from localStorage or system preference
- */
 function initializeTheme() {
-    // Check localStorage first
+    console.log('Initializing theme system...');
+    
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const html = document.documentElement;
+    
+    // Check if elements exist
+    if (!themeToggle) {
+        console.error('❌ Theme toggle button not found!');
+        return;
+    }
+    
+    if (!themeIcon) {
+        console.error('❌ Theme icon not found!');
+        return;
+    }
+    
+    console.log('✅ Theme toggle elements found');
+    
+    // Function to set theme
+    function setTheme(theme) {
+        console.log('Setting theme to:', theme);
+        
+        if (theme === 'dark') {
+            html.setAttribute('data-theme', 'dark');
+            themeIcon.className = 'fas fa-sun';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            html.setAttribute('data-theme', 'light');
+            themeIcon.className = 'fas fa-moon';
+            localStorage.setItem('theme', 'light');
+        }
+        
+        console.log('✅ Theme set to:', theme);
+        console.log('Current data-theme attribute:', html.getAttribute('data-theme'));
+    }
+    
+    // Function to toggle theme
+    function toggleTheme() {
+        const currentTheme = html.getAttribute('data-theme') || 'light';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        console.log('🌓 Toggling theme from', currentTheme, 'to', newTheme);
+        setTheme(newTheme);
+    }
+    
+    // Add click event listener
+    themeToggle.addEventListener('click', function(e) {
+        console.log('🖱️ Theme button clicked!');
+        e.preventDefault();
+        toggleTheme();
+    });
+    
+    console.log('✅ Theme toggle event listener added');
+    
+    // Check for saved theme or system preference
     const savedTheme = localStorage.getItem('theme');
     
     if (savedTheme) {
+        console.log('Found saved theme:', savedTheme);
         setTheme(savedTheme);
     } else {
         // Check system preference
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        console.log('System prefers dark mode:', prefersDark);
         setTheme(prefersDark ? 'dark' : 'light');
     }
-}
-
-/**
- * Set theme and update UI
- * @param {string} theme - 'light' or 'dark'
- */
-function setTheme(theme) {
-    if (theme === 'dark') {
-        html.setAttribute('data-theme', 'dark');
-        themeIcon.className = 'fas fa-sun'; // Show sun icon in dark mode
-        localStorage.setItem('theme', 'dark');
-    } else {
-        html.setAttribute('data-theme', 'light');
-        themeIcon.className = 'fas fa-moon'; // Show moon icon in light mode
-        localStorage.setItem('theme', 'light');
-    }
-}
-
-/**
- * Toggle between light and dark mode
- */
-function toggleTheme() {
-    const currentTheme = html.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    console.log('Theme toggled from', currentTheme, 'to', newTheme);
-    setTheme(newTheme);
-}
-
-// Add click event to theme toggle button
-if (themeToggle) {
-    themeToggle.addEventListener('click', toggleTheme);
-    console.log('Theme toggle button initialized');
-} else {
-    console.error('Theme toggle button not found!');
-}
-
-// Listen for system theme changes
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-    // Only auto-switch if user hasn't manually set a preference
-    if (!localStorage.getItem('theme')) {
-        setTheme(e.matches ? 'dark' : 'light');
-    }
-});
-
-// ==========================================
-// SMOOTH SCROLLING & ACTIVE NAVIGATION
-// ==========================================
-
-// Update active navigation link based on scroll position
-window.addEventListener('scroll', () => {
-    let current = '';
-    const sections = document.querySelectorAll('.section, .hero-section');
     
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        
-        if (window.scrollY >= (sectionTop - 100)) {
-            current = section.getAttribute('id');
+    // Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+            setTheme(e.matches ? 'dark' : 'light');
         }
     });
+}
+
+// ==========================================
+// NAVIGATION & MOBILE MENU
+// ==========================================
+
+function initNavigation() {
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const navLinkItems = document.querySelectorAll('.nav-link');
     
+    // Mobile menu toggle
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    }
+    
+    // Close mobile menu when clicking a link
     navLinkItems.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').substring(1) === current) {
-            link.classList.add('active');
-        }
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
     });
     
-    // Add shadow to navbar on scroll
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-        navbar.style.boxShadow = '0 4px 8px rgba(31, 41, 51, 0.12)';
-    } else {
-        navbar.style.boxShadow = '0 2px 4px rgba(31, 41, 51, 0.08)';
-    }
-});
+    // Update active navigation link based on scroll position
+    window.addEventListener('scroll', () => {
+        let current = '';
+        const sections = document.querySelectorAll('.section, .hero-section');
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            
+            if (window.scrollY >= (sectionTop - 100)) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        navLinkItems.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').substring(1) === current) {
+                link.classList.add('active');
+            }
+        });
+        
+        // Add shadow to navbar on scroll
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 50) {
+            navbar.style.boxShadow = '0 4px 8px rgba(31, 41, 51, 0.12)';
+        } else {
+            navbar.style.boxShadow = '0 2px 4px rgba(31, 41, 51, 0.08)';
+        }
+    });
+}
 
 // ==========================================
 // LOAD PROFILE DATA
@@ -174,7 +208,6 @@ async function loadProfile() {
         
     } catch (error) {
         console.error('Error loading profile:', error);
-        // Show error messages in appropriate sections
         document.getElementById('profileName').textContent = 'Error Loading Profile';
         document.getElementById('aboutContent').innerHTML = '<p>Unable to load profile information.</p>';
     }
@@ -191,18 +224,57 @@ function loadEducation(education) {
         return;
     }
     
-    educationContent.innerHTML = education.map(edu => `
-        <div class="education-item">
-            <h3 class="education-degree">${edu.degree}</h3>
-            <p class="education-institution">${edu.institution}</p>
-            <p class="education-year">${edu.year}</p>
-            ${edu.coursework ? `
-                <p class="education-coursework">
-                    <strong>Relevant Coursework:</strong> ${edu.coursework.join(', ')}
-                </p>
+    educationContent.innerHTML = education.map((edu, index) => `
+        <div class="education-item" style="animation-delay: ${index * 0.1}s">
+            <div class="education-header">
+                <div>
+                    <h3 class="education-degree">${edu.degree}</h3>
+                    <p class="education-institution">
+                        <i class="fas fa-university"></i> ${edu.institution}
+                    </p>
+                </div>
+                <div class="education-meta">
+                    <p class="education-year">
+                        <i class="far fa-calendar"></i> ${edu.year}
+                    </p>
+                    ${edu.location ? `
+                        <p class="education-location">
+                            <i class="fas fa-map-marker-alt"></i> ${edu.location}
+                        </p>
+                    ` : ''}
+                    ${edu.gpa ? `
+                        <p class="education-gpa">
+                            <i class="fas fa-star"></i> GPA: ${edu.gpa}
+                        </p>
+                    ` : ''}
+                </div>
+            </div>
+            
+            ${edu.coursework && edu.coursework.length > 0 ? `
+                <div class="education-details">
+                    <h4><i class="fas fa-book"></i> Relevant Coursework</h4>
+                    <div class="coursework-tags">
+                        ${edu.coursework.map(course => `
+                            <span class="coursework-tag">${course}</span>
+                        `).join('')}
+                    </div>
+                </div>
+            ` : ''}
+            
+            ${edu.achievements && edu.achievements.length > 0 ? `
+                <div class="education-details">
+                    <h4><i class="fas fa-trophy"></i> Achievements</h4>
+                    <ul class="achievements-list">
+                        ${edu.achievements.map(achievement => `
+                            <li>${achievement}</li>
+                        `).join('')}
+                    </ul>
+                </div>
             ` : ''}
         </div>
     `).join('');
+    
+    console.log(`Loaded ${education.length} education entries`);
 }
 
 /**
@@ -229,53 +301,69 @@ function updateContactInfo(contact) {
 }
 
 // ==========================================
-// CONTACT FORM HANDLING
+// CONTACT FORM HANDLING - WITH FORMSPREE
 // ==========================================
 
-/**
- * Handle contact form submission (frontend only - no backend)
- * In a real scenario, you would integrate with a service like Formspree or EmailJS
- */
-const contactForm = document.getElementById('contactForm');
-const formMessage = document.getElementById('formMessage');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            message: document.getElementById('message').value
-        };
-        
-        // Simulate form submission
-        // TO INTEGRATE A REAL FORM SERVICE:
-        // 1. Sign up for Formspree (https://formspree.io/) or EmailJS (https://www.emailjs.com/)
-        // 2. Replace this simulation with actual API call
-        // 3. Example with Formspree:
-        //    fetch('https://formspree.io/f/YOUR_FORM_ID', {
-        //        method: 'POST',
-        //        headers: { 'Content-Type': 'application/json' },
-        //        body: JSON.stringify(formData)
-        //    })
-        
-        // Show success message (simulated)
-        formMessage.className = 'form-message success';
-        formMessage.textContent = 'Thank you for your message! I will get back to you soon.';
-        
-        // Reset form
-        contactForm.reset();
-        
-        // Hide message after 5 seconds
-        setTimeout(() => {
-            formMessage.style.display = 'none';
-        }, 5000);
-        
-        // Log form data to console (for demonstration)
-        console.log('Form submitted:', formData);
-    });
+function initContactForm() {
+    const contactForm = document.getElementById('contactForm');
+    const formMessage = document.getElementById('formMessage');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Show loading state
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+            
+            try {
+                // Send to Formspree
+                const response = await fetch('https://formspree.io/f/mgoagvqo', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                if (response.ok) {
+                    // Success!
+                    formMessage.className = 'form-message success';
+                    formMessage.textContent = '✅ Thank you! Your message has been sent successfully. I\'ll get back to you soon!';
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                    console.log('✅ Email sent successfully via Formspree!');
+                } else {
+                    throw new Error('Form submission failed');
+                }
+                
+            } catch (error) {
+                console.error('Form submission error:', error);
+                formMessage.className = 'form-message error';
+                formMessage.textContent = '❌ Oops! Something went wrong. Please try again or email me directly.';
+            } finally {
+                // Restore button
+                submitButton.textContent = originalButtonText;
+                submitButton.disabled = false;
+                
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    formMessage.style.display = 'none';
+                }, 5000);
+            }
+        });
+    }
 }
 
 // ==========================================
@@ -322,23 +410,6 @@ function initScrollAnimations() {
 }
 
 // ==========================================
-// INITIALIZE ON PAGE LOAD
-// ==========================================
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Initialize theme first (before loading content)
-    initializeTheme();
-    
-    // Load all dynamic content
-    loadProfile();
-    setCurrentYear();
-    initScrollAnimations();
-    
-    console.log('Portfolio initialized successfully!');
-    console.log('To update content, edit JSON files in the data/ folder');
-});
-
-// ==========================================
 // ERROR HANDLING
 // ==========================================
 
@@ -347,5 +418,4 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 window.addEventListener('unhandledrejection', (event) => {
     console.error('Unhandled promise rejection:', event.reason);
-    // You could display a user-friendly error message here
 });

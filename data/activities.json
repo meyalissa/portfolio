@@ -1,69 +1,80 @@
 {
   "activities": [
     {
-      "title": "University Hackathon 2024",
-      "organization": "Tech Innovation Club",
-      "date": "2024-03-15",
-      "description": "Participated in a 24-hour hackathon focused on developing solutions for sustainable technology. Collaborated with a team to build a mobile application addressing environmental awareness.",
+      "title": "Taming ICTFF8 – Capture The Flag (CTF) Competition",
+      "organization": "NetSociety",
+      "date": "11 January 2026",
+      "description": "Participated in a team-based Capture The Flag (CTF) competition focused on collaborative problem-solving and technical challenges.",
       "achievements": [
-        "Developed a working prototype within 24 hours",
-        "Placed in top 10 among 50+ teams",
-        "Gained experience in rapid prototyping and teamwork"
+        "Collaborated with a team during a 12-hour competitive event",
+        "Solved technical challenges under strict time constraints",
+        "Strengthened teamwork, communication, and analytical thinking skills"
       ]
     },
     {
-      "title": "Web Development Workshop",
-      "organization": "Computer Science Department",
-      "date": "2024-02-20",
-      "description": "Attended an intensive workshop on modern web development practices, focusing on React.js, responsive design, and deployment strategies. Completed hands-on projects and received certification.",
+      "title": "Road To ICTFF8 – Capture The Flag (CTF) Program",
+      "organization": "NetSociety",
+      "date": "2025-12-28",
+      "description": "Participated as an individual competitor in an intensive Capture The Flag (CTF) cybersecurity training and competition program.",
       "achievements": [
-        "Built three complete web applications",
-        "Learned advanced React hooks and state management",
-        "Received workshop completion certificate"
+        "Competed individually in a 48-hour continuous challenge",
+        "Placed in the Top 10 among participants",
+        "Enhanced problem-solving, cybersecurity fundamentals, and time-management skills under pressure"
       ]
     },
     {
-      "title": "Open Source Contribution",
-      "organization": "GitHub Community",
-      "date": "2023-11-10",
-      "description": "Made first open-source contributions to various projects on GitHub, including bug fixes, documentation improvements, and feature implementations. Engaged with the developer community.",
+      "title": "Ideathon Innovation Challenge",
+      "organization": "Arena of Computer Science (AreCS)",
+      "date": "2025-12-18",
+      "description": "Competed in an innovation-focused ideathon involving idea generation, solution design, and pitching to a panel of judges.",
       "achievements": [
-        "Contributed to 5 different open-source projects",
-        "Fixed critical bugs and improved documentation",
-        "Learned collaborative development workflows"
+        "Secured 1st Place overall",
+        "Delivered a successful project pitch to judges",
+        "Enhanced presentation, problem-solving, and innovation skills"
       ]
     },
     {
-      "title": "Database Design Competition",
-      "organization": "National Computing Society",
-      "date": "2023-09-05",
-      "description": "Competed in a national database design competition, creating an optimized database schema for a complex business scenario. Presented solution to industry professionals.",
+      "title": "Quality Assurance Engineer (Software Tester) – Internship",
+      "organization": "Pandai Education Sdn. Bhd.",
+      "date": "September 2024 – February 2025",
+      "description": "Completed a software quality assurance internship focusing on manual testing, bug tracking, and collaboration with development teams for mobile applications.",
       "achievements": [
-        "Secured 2nd place nationally",
-        "Designed efficient normalized database structure",
-        "Presented to panel of industry experts"
+        "Proposed and helped transition the company’s project management and issue tracking workflow from multiple platforms to a centralized GitHub-based system",
+        "Improved team collaboration and tracking efficiency by standardizing workflows using GitHub Issues and repositories",
+        "Conducted regression testing for Android and iOS applications and reported defects to ensure product stability",
+        "Continued contributing to the company as a part-time Quality Assurance Engineer after completing the internship"
       ]
     },
     {
-      "title": "Peer Tutoring Program",
-      "organization": "University Tutoring Center",
-      "date": "2023-08-01",
-      "description": "Served as a peer tutor for introductory programming courses, helping fellow students understand fundamental concepts in Python and Java. Conducted weekly tutoring sessions.",
+      "title": "Vice President",
+      "organization": "Gerakan Sukarelawan Club, UiTM",
+      "date": "2023 - 2024",
+      "description": "Led and coordinated volunteering initiatives, managed team activities, and assisted in planning large-scale community programs.",
       "achievements": [
-        "Tutored 20+ students over two semesters",
-        "Improved students' understanding and grades",
-        "Developed teaching and communication skills"
+        "Strengthened leadership and communication skills",
+        "Organized multiple community service programs"
       ]
     },
     {
-      "title": "Tech Talk: Introduction to Machine Learning",
-      "organization": "AI/ML Student Group",
-      "date": "2023-05-18",
-      "description": "Attended and participated in a comprehensive tech talk series on machine learning fundamentals, exploring various algorithms, applications, and ethical considerations in AI.",
+      "title": "Virtual International Breakthrough Invention, Innovation & Design Exhibition (VIBIIDE)",
+      "organization": "International Innovation Exhibition",
+      "date": "August 2024",
+      "description": "Participated in an international-level innovation and design exhibition showcasing creative and technology-driven solutions.",
       "achievements": [
-        "Completed hands-on ML projects",
-        "Networked with industry professionals",
-        "Gained foundational knowledge in ML concepts"
+        "Awarded Gold Award for project excellence",
+        "Delivered a recorded video pitch to present the project to an international panel of judges",
+        "Demonstrated strong innovation, communication, and presentation skills"
+      ]
+    },
+    {
+      "title": "CODEATHON – Programming Competition",
+      "organization": "University-Level Programming Competition",
+      "date": "June 2024",
+      "description": "Participated in a competitive programming event focused on solving algorithmic and logic-based challenges under time constraints.",
+      "achievements": [
+        "Secured 1st Runner-Up position",
+        "Demonstrated strong problem-solving and coding skills",
+        "Performed effectively under competitive and time-limited conditions"
       ]
     }
   ]

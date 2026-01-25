@@ -4,30 +4,70 @@
   "tagline": "Passionate about software development, problem-solving, and creating innovative solutions through technology.",
   "profileImage": "images/profile.png",
   "about": [
-    "I am a dedicated Netcentric student with a strong foundation in software development and a keen interest in full-stack web development, data structures, and algorithms. Throughout my academic journey, I have consistently sought opportunities to apply theoretical knowledge to practical projects.",
+    "I am a dedicated Computer Science student with a strong foundation in software development and a keen interest in full-stack web development, data structures, and algorithms. Throughout my academic journey, I have consistently sought opportunities to apply theoretical knowledge to practical projects.",
     "My passion for technology extends beyond the classroom. I actively participate in hackathons, coding competitions, and collaborative projects that challenge me to think creatively and work effectively in team environments. I believe in continuous learning and staying updated with emerging technologies.",
     "I am currently seeking internship opportunities where I can contribute my skills, learn from experienced professionals, and gain real-world experience in software development. I am particularly interested in roles that involve building scalable applications and solving complex technical challenges."
   ],
   "education": [
     {
-      "degree": "Bachelor of Science in Computer Science",
-      "institution": "University of Technology",
-      "year": "2022 - 2026 (Expected)",
+      "degree": "Bachelor of Computer Science (Hons.) Netcentric Computing",
+      "institution": "University Technology MARA",
+      "year": "2025 - Present",
+      "location": "Jasin, Melaka",
+      "gpa": "3.95/4.00",
       "coursework": [
-        "Data Structures & Algorithms",
-        "Object-Oriented Programming",
-        "Database Management Systems",
         "Web Development",
-        "Software Engineering",
+        "Database Management",
         "Computer Networks",
-        "Operating Systems",
-        "Machine Learning Fundamentals"
+        "Software Engineering",
+        "Data Structures & Algorithms",
+        "Object-Oriented Programming"
+      ],
+      "achievements": [
+        "Dean's List (2023/2024)",
+        "Best Project Award in Web Development Course"
+      ]
+    },
+    {
+      "degree": "Diploma in Computer Science",
+      "institution": "University Technology MARA",
+      "year": "2022 - 2025",
+      "location": "Raub, Pahang",
+      "gpa": "3.91/4.00",
+      "coursework": [
+        "Programming Fundamentals",
+        "Mobile Application Development",
+        "System Analysis & Design",
+        "Computer Architecture"
+      ],
+      "achievements": [
+        "Graduated with Honors",
+        "President of Computer Science Society"
+      ]
+    },
+    {
+      "degree": "SPM (Malaysian Certificate of Education)",
+      "institution": "MRSM Bentong",
+      "year": "2021",
+      "location": "Bentong, Pahang",
+      "gpa": "8A's",
+      "coursework": [
+        "Mathematics",
+        "Additional Mathematics",
+        "Physics",
+        "Chemistry",
+        "Mechanical Engineering",
+        "Engineering Drawing"
+      ],
+      "achievements": [
+        "Cocurricular Excellence Award",
+        "Best Subject Engineering Drawing"
       ]
     }
   ],
   "contact": {
-    "email": "melissa.sofia0204@gmail.com",
-    "github": "https://github.com/meyalissa",
+    "email": "melissa.sofia@email.com",
+    "github": "https://github.com/melissasofia",
     "linkedin": "https://linkedin.com/in/melissasofia"
   }
 }
