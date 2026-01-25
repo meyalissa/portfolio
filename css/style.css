@@ -591,7 +591,7 @@ a {
     max-width: 400px;
     height: auto;
     border-radius: 12px;
-    box-shadow: var(--shadow-xl);
+    /* box-shadow: var(--shadow-xl); */
     object-fit: cover;
     transition: transform 0.5s ease;
     animation: popIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) 1s backwards;
