@@ -21,7 +21,7 @@
       "description": "An interactive weather application that provides real-time weather information, forecasts, and location-based data visualization. Features a clean, intuitive interface with responsive design.",
       "technologies": ["React", "API Integration", "Chart.js", "Tailwind CSS"],
       "image": "images/image.png",
-      "github": "https://github.com/janedoe/weather-dashboard",
+      "github": "https://github.com/meyalissa/weather-dashboard",
       "demo": ""
     },
     {
@@ -29,7 +29,7 @@
       "description": "An educational tool that visualizes popular sorting and searching algorithms in real-time. Helps students understand algorithm behavior through interactive animations and step-by-step execution.",
       "technologies": ["JavaScript", "HTML5 Canvas", "CSS3", "Animation"],
       "image": "images/image.png",
-      "github": "https://github.com/janedoe/algo-visualizer",
+      "github": "https://github.com/meyalissa/algo-visualizer",
       "demo": ""
     },
     {
@@ -37,7 +37,7 @@
       "description": "A comprehensive student management system with features for course registration, grade tracking, assignment submission, and communication between students and faculty. Built as a team project.",
       "technologies": ["Python", "Django", "PostgreSQL", "Bootstrap"],
       "image": "images/image.png",
-      "github": "https://github.com/janedoe/student-portal",
+      "github": "https://github.com/meyalissa/student-portal",
       "demo": ""
     },
     {
@@ -45,7 +45,7 @@
       "description": "A budgeting application that helps users track expenses, set financial goals, and visualize spending patterns through interactive charts and reports. Features data export and budget alerts.",
       "technologies": ["React", "Firebase", "Chart.js", "Material-UI"],
       "image": "images/image.png",
-      "github": "https://github.com/janedoe/finance-tracker",
+      "github": "https://github.com/meyalissa/finance-tracker",
       "demo": ""
     }
   ]
