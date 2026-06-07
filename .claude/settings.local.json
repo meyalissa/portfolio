@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Recurse -Filter \"*.blade.php\" \"c:\\\\laragon\\\\www\\\\Ecoxchange\\\\resources\\\\views\")",
+      "Bash(Select-Object FullName)",
+      "Bash(Sort-Object FullName)",
+      "PowerShell(Get-ChildItem \"c:\\\\laragon\\\\www\\\\Ecoxchange\\\\resources\\\\views\" | ForEach-Object { if \\($_.PSIsContainer\\) { \"[DIR] $\\($_.Name\\)\" } else { \"[FILE] $\\($_.Name\\)\" } })",
+      "PowerShell(Get-ChildItem \"c:\\\\laragon\\\\www\\\\Ecoxchange\\\\database\\\\migrations\" | ForEach-Object { $_.Name } | Sort-Object)",
+      "PowerShell(cd \"c:\\\\laragon\\\\www\\\\Ecoxchange\"; $content = Get-Content \"node_modules\\\\@inertiajs\\\\react\\\\dist\\\\index.js\" -Raw; $idx = $content.IndexOf\\('async function createInertiaApp'\\); $content.Substring\\($idx, 600\\))",
+      "PowerShell(cd \"c:\\\\laragon\\\\www\\\\Ecoxchange\"; \\(Get-Content \"storage\\\\logs\\\\laravel.log\" -Tail 5\\) -join \"`n\")",
+      "PowerShell(cd \"c:\\\\laragon\\\\www\\\\Ecoxchange\"; $content = Get-Content \"node_modules\\\\@inertiajs\\\\react\\\\dist\\\\index.js\" -Raw; $idx = $content.IndexOf\\('getElementById'\\); $content.Substring\\([Math]::Max\\(0,$idx-200\\), 600\\))",
+      "Bash(dir /s /b resources\\\\views\\\\*.blade.php)"
+    ]
+  }
+}

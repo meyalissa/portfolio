@@ -1,6 +1,19 @@
 {
   "activities": [
     {
+      "title": "1st International Prosolve 2026 (ICPC-Style Programming Competition)",
+      "organization": "Universiti Telnologi MARA (UiTM)",
+      "date": "2026",
+      "description": "Participated ICPC-style programming competition that challenged teams to solve complex algorithmic and computational problems within a limited time frame.",
+      "achievements": [
+        "Led a team to achieve 2nd Runner-Up in an international ICPC-style programming competition",
+        "Qualified for the Finals by advancing into the Top 10 teams during the preliminary round",
+        "Mentored teammates in algorithmic problem-solving, contest strategy, and time management",
+        "Applied data structures, algorithms, and analytical thinking to solve challenging programming problems",
+        "Strengthened leadership, communication, and teamwork skills in a competitive environment"
+      ]
+    },
+    {
       "title": "Taming ICTFF8 – Capture The Flag (CTF) Competition",
       "organization": "NetSociety",
       "date": "11 January 2026",

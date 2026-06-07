@@ -17,35 +17,11 @@
       "demo": "https://meyalissa.github.io/SkillVora/"
     },
     {
-      "title": "Weather Dashboard",
-      "description": "An interactive weather application that provides real-time weather information, forecasts, and location-based data visualization. Features a clean, intuitive interface with responsive design.",
-      "technologies": ["React", "API Integration", "Chart.js", "Tailwind CSS"],
-      "image": "images/image.png",
-      "github": "https://github.com/meyalissa/weather-dashboard",
-      "demo": ""
-    },
-    {
-      "title": "Algorithm Visualizer",
-      "description": "An educational tool that visualizes popular sorting and searching algorithms in real-time. Helps students understand algorithm behavior through interactive animations and step-by-step execution.",
-      "technologies": ["JavaScript", "HTML5 Canvas", "CSS3", "Animation"],
-      "image": "images/image.png",
-      "github": "https://github.com/meyalissa/algo-visualizer",
-      "demo": ""
-    },
-    {
-      "title": "Student Portal System",
-      "description": "A comprehensive student management system with features for course registration, grade tracking, assignment submission, and communication between students and faculty. Built as a team project.",
-      "technologies": ["Python", "Django", "PostgreSQL", "Bootstrap"],
-      "image": "images/image.png",
-      "github": "https://github.com/meyalissa/student-portal",
-      "demo": ""
-    },
-    {
-      "title": "Personal Finance Tracker",
-      "description": "A budgeting application that helps users track expenses, set financial goals, and visualize spending patterns through interactive charts and reports. Features data export and budget alerts.",
-      "technologies": ["React", "Firebase", "Chart.js", "Material-UI"],
-      "image": "images/image.png",
-      "github": "https://github.com/meyalissa/finance-tracker",
+      "title": "Smart Toilet IoT Monitoring System",
+      "description": "Designed and developed a smart toilet management system using IoT technology to automate restroom monitoring and maintenance. The system integrates ESP32 microcontrollers and multiple sensors to track occupancy, water tank levels, air quality, and cleanliness indicators. Real-time data is transmitted to a cloud database and visualized through a responsive web dashboard, allowing maintenance staff to receive alerts, optimize cleaning schedules, and improve facility efficiency.",
+      "technologies": ["ESP32", "IoT", "Arduino IDE", "Firebase", "Flutter"],
+      "image": "images/smartToilet.png",
+      "github": "https://github.com/meyalissa/SmartToiletIOT",
       "demo": ""
     }
   ]
