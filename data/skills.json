@@ -4,25 +4,59 @@
       "category": "Programming Languages",
       "icon": "fas fa-code",
       "items": [
-        "Python",
-        "Java",
-        "JavaScript",
         "C++",
+        "Java",
+        "Python",
+        "PHP",
+        "JavaScript",
+        "TypeScript",
         "SQL",
-        "HTML5 & CSS3",
-        "PHP"
+        "HTML5",
+        "CSS3"
       ]
     },
     {
-      "category": "Web Technologies",
+      "category": "Web & Application Development",
       "icon": "fas fa-globe",
       "items": [
-        "React.js",
-        "Node.js",
-        "Express.js",
-        "RESTful APIs",
-        "Bootstrap & Tailwind CSS",
-        "Responsive Web Design"
+        "Laravel",
+        "Next.js",
+        "Flask",
+        "Bootstrap",
+        "Blade Templates",
+        "REST APIs",
+        "WebSockets",
+        "Responsive Web Design",
+        "Android Development"
+      ]
+    },
+    {
+      "category": "AI, Machine Learning & Technologies",
+      "icon": "fas fa-brain",
+      "items": [
+        "TensorFlow",
+        "PyTorch",
+        "Ultralytics YOLO",
+        "EfficientNet-B0",
+        "Computer Vision",
+        "AI Model Inference",
+        "Google Maps API",
+        "Leaflet",
+        "Firebase"
+      ]
+    },
+    {
+      "category": "Software Quality Assurance & Testing",
+      "icon": "fas fa-bug",
+      "items": [
+        "Manual Testing",
+        "Regression Testing",
+        "Release Testing",
+        "Test Case Documentation",
+        "Bug Reporting",
+        "Defect Identification",
+        "Functional Testing",
+        "QA Documentation"
       ]
     },
     {
@@ -30,24 +64,18 @@
       "icon": "fas fa-tools",
       "items": [
         "Git & GitHub",
+        "GitHub Projects",
         "VS Code",
-        "MySQL & MongoDB",
+        "Android Studio",
+        "MySQL",
         "Laragon",
-        "Postman",
-        "Docker (Basic)",
-        "Linux/Unix"
-      ]
-    },
-    {
-      "category": "Core Competencies",
-      "icon": "fas fa-brain",
-      "items": [
-        "Data Structures & Algorithms",
-        "Object-Oriented Programming",
-        "Database Design",
-        "Problem Solving",
-        "Team Collaboration",
-        "Agile Methodologies"
+        "HeidiSQL",
+        "Figma",
+        "Canva",
+        "Adobe Photoshop",
+        "Adobe Premiere Pro",
+        "CapCut",
+        "Blender"
       ]
     }
   ]

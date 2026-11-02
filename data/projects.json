@@ -1,11 +1,41 @@
 {
   "projects": [
     {
-      "title": "EcoXchange – Waste Collection & Recycling System",
-      "description": "A responsive web-based system developed to improve waste collection and recycling processes. Focused on usability, data management, and team collaboration.",
-      "technologies": ["HTML", "CSS", "JavaScript", "PHP", "SQL"],
+      "title": "EcoXchange – AI-Driven Smart Recycling Management System",
+      "description": "An AI-powered recycling management platform designed to streamline recycling collection processes by connecting customers, recycling centres, staff, and riders. Features AI-assisted recyclable item classification, geolocation-based services, and intelligent pickup suggestions to improve collection efficiency and user experience.",
+      "technologies": [
+        "Laravel",
+        "PHP",
+        "Blade",
+        "Bootstrap",
+        "JavaScript",
+        "MySQL",
+        "Google Maps API",
+        "Python",
+        "TensorFlow",
+        "EfficientNet-B0",
+        "Haversine Algorithm",
+        "Ant Colony Optimization (ACO)"
+      ],
       "image": "images/ecoxchange.png",
       "github": "https://github.com/meyalissa/ecoxchange",
+      "demo": ""
+    },
+    {
+      "title": "Project Guardian – AI-Powered Maritime Vessel Detection & Situational Awareness System",
+      "description": "An AI-powered maritime monitoring system developed to enhance vessel detection, identification, tracking, and situational awareness. Integrates YOLO11 object detection and binary classification with a fail-closed decision architecture, CPA/TCPA calculations, and a geographic dashboard for maritime monitoring.",
+      "technologies": [
+        "Python",
+        "YOLO11",
+        "Computer Vision",
+        "Machine Learning",
+        "AI Model Inference",
+        "Web Development",
+        "Real-Time Camera Streaming",
+        "Automated Testing"
+      ],
+      "image": "images/project-guardian.png",
+      "github": "https://github.com/meyalissa/Project-Guardian",
       "demo": ""
     },
     {

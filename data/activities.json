@@ -1,6 +1,53 @@
 {
   "activities": [
     {
+      "title": "Participant – SDP University Hackathon 2026",
+      "organization": "Sime Darby Property",
+      "date": "October 2026",
+      "description": "Participated in a university-level hackathon focused on innovation, collaborative problem-solving, and developing technology-driven solutions.",
+      "achievements": [
+        "Collaborated with team members to develop an innovative solution within a competitive environment",
+        "Applied technical knowledge, critical thinking, and problem-solving skills to address challenges",
+        "Strengthened teamwork, creativity, and time-management skills through collaborative development"
+      ]
+    },
+    {
+      "title": "4th Runner-Up – Strategic Electronic Defence Innovation Challenge (SEDIC) 2026",
+      "organization": "CyberDSA 2026",
+      "date": "October 2026",
+      "description": "Participated in an innovation challenge focused on developing technology-driven solutions for electronic defence and cybersecurity.",
+      "achievements": [
+        "Achieved 4th Runner-Up position in the Strategic Electronic Defence Innovation Challenge",
+        "Collaborated with team members to develop and present an innovative technical solution",
+        "Applied technical problem-solving, system development, and analytical skills"
+      ]
+    },
+    {
+      "title": "Vice President – SULAM Programme (Service-Learning Malaysia – University for Society)",
+      "organization": "Universiti Teknologi MARA (UiTM), Jasin",
+      "date": "2026",
+      "description": "Served as Vice President of a university-community engagement programme promoting digital citizenship, online responsibility, and digital ethics among secondary school students.",
+      "achievements": [
+        "Coordinated programme planning and execution across three secondary schools involving approximately 251 students",
+        "Led and coordinated multiple committees, overseeing task delegation and programme preparation",
+        "Contributed to the development of interactive educational modules and activities",
+        "Managed programme timelines, stakeholder communication, and school coordination",
+        "Strengthened leadership, project management, and teamwork skills"
+      ]
+    },
+    {
+      "title": "2nd Runner-Up – 1st International Prosolve 2026 (ICPC-Style Programming Competition)",
+      "organization": "Universiti Teknologi MARA (UiTM)",
+      "date": "2026",
+      "description": "Participated in an international ICPC-style programming competition challenging teams to solve complex algorithmic and computational problems under time constraints.",
+      "achievements": [
+        "Achieved 2nd Runner-Up position in an international programming competition",
+        "Qualified for the finals by advancing into the Top 10 teams during the preliminary round",
+        "Applied data structures, algorithms, and analytical thinking to solve challenging programming problems",
+        "Strengthened leadership, communication, and teamwork skills"
+      ]
+    },
+    {
       "title": "1st International Prosolve 2026 (ICPC-Style Programming Competition)",
       "organization": "University Technology MARA (UiTM)",
       "date": "2026",
